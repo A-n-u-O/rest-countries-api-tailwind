@@ -1,27 +1,12 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './App.css'
 
-import { faMagnifyingGlass, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import Countries from './Components/Countries';
-import { Error } from './Components/Error';
-import { useEffect, useState } from 'react';
+import SingleCountry from './Components/SingleCountry';
 
 
 function App() {
-  const [theme, setTheme] = useState('light');
   
-  useEffect(()=>{
-    (theme === 'dark')
-     ? 
-     document.documentElement.classList.add('dark')
-      :
-     document.documentElement.classList.remove('dark'); 
-  },[theme]);
-
-  const handleThemeSwitch = () =>{
-    setTheme(theme === 'dark' ? 'light' : 'dark');
-  };
 
   
 
@@ -30,7 +15,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path='/' element = {<Countries/>} ></Route>
-            <Route path='*' element = {<Error/>}></Route>
+            <Route path='/:name' element = {<SingleCountry/>} ></Route>
           </Routes>
         </BrowserRouter>
         

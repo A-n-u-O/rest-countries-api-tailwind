@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
 import Article from "./Article";
+import Nav from './Nav';
 
-export default function Countries (){
+export default function Countries ({theme, handleThemeSwitch}){
     const [country, setCountry] = useState([])
     const url = 'https://restcountries.com/v3.1/all';
     useEffect(()=>{
@@ -19,28 +20,11 @@ export default function Countries (){
         getCountry()
     }, [])
 
+   
+
     return (
         <>
-        <nav className='nav'>
-          <span>Where in the world</span>
-          <div className='  flex justify-end'>
-            <button className='color-theme' data-theme = {theme === 'dark' ? 'light' : 'dark'} onClick={handleThemeSwitch}>
-              <FontAwesomeIcon icon = {theme === 'dark' ? faSun : faMoon}/>
-              <span>{(theme === 'dark') ? 'Dark Mode' : 'Light Mode'}</span>
-            </button>
-          </div>
-        </nav>
-      <div className='container'>
-        <header>
-          <label htmlFor='search'>
-            <FontAwesomeIcon icon={faMagnifyingGlass}/>
-          </label>
-          <input type='text' name='search' placeholder='search country...'/>
-            <select>
-              
-            </select>
-        </header>
-      </div>        
+            <Nav/>
             {!country ? <h1 className="loading text-gray-900 font-bold uppercase tracking-wide flex items-center justify-center text-center h-screen text-4xl dark:text-white">Loading...</h1> : 
             <section className=" container mx-auto p-8">
             {/* form */}
