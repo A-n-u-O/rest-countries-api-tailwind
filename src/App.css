@@ -1,0 +1,141 @@
+/* @import url('./index.css');
+
+Global styles
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Nunito Sans';
+  box-sizing: border-box;
+}
+
+Navigation styles
+.nav {
+  background: var(--elements-color);
+  color: var(--text-color);
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+Body styles
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(243, 244, 246);
+  color: var(--text-color);
+}
+
+Theme variables
+:root {
+  --dark-mode-elements: hsl(209, 23%, 22%);
+  --dark-mode-background: hsl(207, 26%, 17%);
+  --light-mode-text: hsl(200, 15%, 8%);
+  --light-mode-input: hsl(0, 0%, 52%);
+  --light-mode-background: hsl(0, 0%, 98%);
+  --dark-mode-text: hsl(0, 0%, 100%);
+}
+
+Dark mode
+[data-theme='dark'] {
+  --background-color: var(--dark-mode-background);
+  --text-color: var(--dark-mode-text);
+  --elements-color: var(--dark-mode-elements);
+}
+
+Light mode
+[data-theme='light'] {
+  --background-color: var(--light-mode-background);
+  --text-color: var(--light-mode-text);
+  --elements-color: var(--light-mode-elements); Corrected variable name
+  --input-color: var(--light-mode-input); Unused variable, consider removing or using it
+}
+
+Loading styles
+.loading {
+  color: rgb(17, 24, 39);
+  font-weight: 800;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  font-size: 36px;
+  line-height: 40px;
+}
+
+Country name styles
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+
+
+.country{
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr)); 
+  gap: 32px;
+}
+
+.country-group{
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.country-details {
+  padding: 16px;
+}
+.country-name {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: var(--text-color);
+  color: rgb(17, 24, 39);
+  font-weight: 900;
+  margin-bottom: 0.5rem
+}
+
+.country-props{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: flex-start;
+  gap: 8px;
+  list-style: none;
+}
+
+
+@media (min-width: 425px){
+  .country{
+    grid-template-columns: repeat(2, minmax(0, 1fr)); 
+  }
+
+  .flag{
+    height: 288px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (min-width: 640px) {
+  .container {
+      max-width: 640px;
+  }
+}
+
+@media (min-width: 768px){
+  .country{
+    grid-template-columns: repeat(3, minmax(0, 1fr)); 
+  }
+  .container {
+    max-width: 768px;
+}
+}
+ */
