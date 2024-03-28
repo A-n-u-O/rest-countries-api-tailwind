@@ -18,7 +18,7 @@ function App() {
             <Route path='/:name' element = {<SingleCountry/>} ></Route>
           </Routes>
         </BrowserRouter>
-        
+        <p>Made by <a href='https://www.linkedin.com/in/a-n-u-o/'>Anuoluwapo</a>, 2024.</p>
     </>
   )
 }
