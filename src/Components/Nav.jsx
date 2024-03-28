@@ -6,10 +6,9 @@ import { faMagnifyingGlass, faMoon, faSun } from "@fortawesome/free-solid-svg-ic
 const Nav = ({theme ,handleThemeSwitch}) => {
   return (
     <>
-        <nav className='nav'>
+        <nav className="flex flex-row gap-4  items-center justify-between mb-8">
           <span>Where in the world</span>
           <Theme   theme={theme} handleThemeSwitch={handleThemeSwitch} faSun={faSun} faMoon={faMoon}  />
-          <Header   faMagnifyingGlass={faMagnifyingGlass}  />
         </nav>
     </>
   )

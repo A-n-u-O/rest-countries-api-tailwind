@@ -15,10 +15,10 @@ export const Theme=()=>{
   const handleThemeSwitch = () =>{
       setTheme(theme === 'dark' ? 'light' : 'dark');
   };
-  return <div className='  flex justify-end'>
-            <button className='color-theme' data-theme={theme === 'dark' ? 'light' : 'dark'} onClick={handleThemeSwitch}>
+  return <div>
+            <button className='color-theme bg-white hover:bg-slate-50 dark:bg-slate-600 dark:hover:bg-slate-500 rounded-sm p-3 shadow-sm flex items-center justify-between' data-theme={theme === 'dark' ? 'light' : 'dark'} onClick={handleThemeSwitch}>
               <FontAwesomeIcon icon={theme === 'dark' ? faSun : faMoon} />
-              <span>{theme === 'dark' ? 'Dark Mode' : 'Light Mode'}</span>
+              <span className=" px-2">{theme === 'dark' ? 'Dark Mode' : 'Light Mode'}</span>
             </button>
           </div>;
 }
